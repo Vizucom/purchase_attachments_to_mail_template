@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
+from openerp.tools.translate import _
 
 class email_template(osv.osv):
     
@@ -23,7 +24,7 @@ class email_template(osv.osv):
         return results
 
     _columns = {
-        'send_purchase_order_attachments': fields.boolean('Send Purchase Order Attachments', help='In the PO e-mail composition wizard, attach also all attachments related to the PO'),      
+        'send_purchase_order_attachments': fields.boolean(_('Send Purchase Order Attachments'), help=_('In the PO e-mail composition wizard, attach also all attachments related to the PO')),      
     }
     
     _defaults = {
